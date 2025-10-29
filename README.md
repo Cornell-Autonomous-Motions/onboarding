@@ -41,3 +41,9 @@ The data follows an **underlying periodic trend** with some added zero-mean nois
 
 ## The Highest Score Gets a High Five :)
 
+---
+
+## Hashes
+
+- `train.csv`: b5eea6e9e2aab9cd662e2895804d768aa7e14a6d3e5eaf657a1cafe52ba5c6e2
+- `key.csv`: 00d059f2abb48d3671a177f71f16dd7e6df3a489ea8ee74bf784ced49f7be880
