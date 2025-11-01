@@ -20,30 +20,39 @@ The data follows an **underlying periodic trend** with some added zero-mean nois
 
 ## Task
 
-1. **Write a C++ program** (`predict.cpp`) that:
-   - Reads the input CSV (`train.csv`)
-   - Analyzes each row to infer the underlying pattern
-   - Predicts the next 3 days of temperature for each row
-   - Outputs predictions to a new file, `submission.csv`
+### 1. Write a C++ program (`predict.cpp`) that
 
-2. **Submission format:**
-   - `submission.csv` should have the same number of rows as the input
-   - Each row should contain **3 predicted temperature values**, separated by commas
+- Reads the input CSV (`train.csv`)
+- Analyzes each row to infer the underlying pattern
+- Predicts the next 3 days of temperature for each row
+- Outputs predictions to a new file, `submission.csv`
 
-   Example:
+### 2. Submission Format
 
-   ```csv
-   21.43,22.11,23.00
-   18.92,19.07,18.85
-   ...
+For Kaggle-style evaluation, your `submission.csv` must have:
 
----
+1. **Columns:**
 
-## The Highest Score Gets a High Five :)
+- `id` — unique integer for each row (matching the id in train.csv or solution.csv)
+- `day_1, day_2, day_3` — predicted temperature values for the next 3 days
 
----
+2. **Number of rows:** Same as the number of rows in train.csv.
 
-## Hashes
+3. **Example:**
 
-- `train.csv`: b5eea6e9e2aab9cd662e2895804d768aa7e14a6d3e5eaf657a1cafe52ba5c6e2
-- `key.csv`: 00d059f2abb48d3671a177f71f16dd7e6df3a489ea8ee74bf784ced49f7be880
+```text
+id,day_1,day_2,day_3
+1,21.43,22.11,23.00
+2,18.92,19.07,18.85
+3,25.10,25.35,25.50
+...
+```
+
+4. **Notes:**
+
+- The `id` must match the `id` column in the solution CSV (`solution.csv`) for correct scoring.
+- All predicted values must be numeric.
+
+This ensures your submission can be directly evaluated by Kaggle's automatic scoring system using the **Mean Absolute Error (MAE)** metric.
+
+### 3. The Highest Score Gets a High Five :)
